@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/daniel/assets/css/bootstrap/dist/css/bootstrap.min.css">
+    <script src="/daniel/assets/css/bootstrap/dist/js/jquery-3.2.1.min.js"></script>
+    <script src="/daniel/assets/css/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/c9b9bdfb2b.js"></script>
+    <script language=javascript type=text/javascript src=js/jsinstagram.js></script>
+    <link href='https://fonts.googleapis.com/css?family=Oleo Script' rel='stylesheet'>
+    <style>
+
+ /*Inicio nav-header*/
+body{
+    padding-top: 70px;
+}
+
+.nav{
+    padding-left: 4px;
+}
+
+/*Rotacion engranaje*/
+.girar{
+   transition-property: transform;
+    transition-duration: 1s;
+}
+
+.girar:hover {
+    animation-name: rotate; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+
+/*Dropdown*/
+    .dropdown-content{
+        right: 0 !important;
+        margin: 0 171px 0 -100px;
+    }
+
+    .dropdown-menu .divider{
+        margin: 0 !important;
+    }
+    
+    .boton1{
+        margin-top: 12px;
+        margin-bottom: 15px;    
+    }
+
+    .boton2{
+        margin-top: 12px;
+        margin-bottom: 15px;
+    }
+
+    .boton3{
+        margin-top: 10px;
+    }
+
+    .boton4{
+        margin-top: 10px;
+    }
+
+    .modal-footer{
+        margin-top: 10px !important;
+    }
+
+    .container-fluid{
+        padding: 0px 0px 0px 0px;
+    }
+
+    .navbar-brand{
+        font-family: 'Oleo Script';
+        font-size: 28px;
+        margin: 4px 0px 1px 80px !important;
+    }
+
+    .dropdown-toggle{
+        margin-right: 171px;
+    }
+
+    .derechaFloat{
+        float: right !important;
+        margin-right: -17px;
+    }
+
+    .marg10{
+
+        margin-top: 10px;
+    }
+
+    .modal-backdrop{
+        z-index: 0 !important;
+    }
+    
+    .navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover {
+    color: #555;
+    background-color: #e7e7e7;
+    z-index: -1;
+    background-color: transparent;
+    }
+    /*Fin nav-header*/
+
+    /*Inicio list/grid view*/
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    color: white !important;
+    background-color: #7E7E80;
+}
+
+.navpills{
+    width: 100%;
+    margin-left: 43%;
+    margin-bottom: 0.5%;
+    margin-top: 0%;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #7E7E80;
+}
+
+.btn-default{
+    border-color: transparent;
+}
+
+.color-botones{
+    color: gray !important;
+}
+
+.color-botones:hover{
+    color: white !important;
+    background-color: lightgray !important;
+    border-color: transparent !important;
+}
+
+.color-botones:active{
+    color: #fcfcfc !important;
+    background-color: #827F7B !important;
+}
+
+.glyphicon { margin-right:5px; }
+
+.container2{
+    width: 100%;
+}
+
+.thumbnail
+{
+    background-color: #eeeeee;
+    border-color: #eeeeee;
+    margin-bottom: 20px;
+    padding: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 0;
+}
+
+.item.list-group-item
+{
+    float: none;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.item.list-group-item:nth-of-type(odd):hover,.item.list-group-item:hover
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item .list-group-image
+{
+    margin-right: none;
+}
+.item.list-group-item .thumbnail
+{
+    margin-bottom: 0px;
+}
+.item.list-group-item .caption
+{
+    padding: 9px 9px 0px 9px;
+}
+.item.list-group-item:nth-of-type(odd)
+{
+    background: #eeeeee;
+}
+
+.item.list-group-item:before, .item.list-group-item:after
+{
+    display: table;
+    content: " ";
+}
+
+.item.list-group-item img
+{
+    float: none;
+}
+.item.list-group-item:after
+{
+    clear: both;
+}
+.list-group-item-text
+{
+    margin: 0 0 11px;
+}
+.item{
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin: 0 0 -20px 0 !important;
+}
+
+    /*Fin List/grid view*/
+
+    /*Inicio IMG layout*/
+section {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    padding-top: 9em;
+}
+
+.insta {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    width: 100%;
+    margin-bottom: 60px;
+    margin-top: -18%;
+}
+
+
+.top-insta {
+    position: relative;
+    padding: 16px;
+    height: 60px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.post img {
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+.footer {
+    padding: 0 16px;
+}
+.react {
+    margin-top: 4px;
+    position: relative;
+}
+.react a {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.react a:last-child {
+    margin-right: 0
+}
+.react .love {
+    background-image: url(https://goo.gl/NLUdLH);
+    background-position: -408px -156px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+}
+.react .comment {
+    background-image: url(https://goo.gl/NLUdLH);
+    background-position: -408px -26px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+}
+.react .save {
+     background-image: url(https://goo.gl/NLUdLH);
+    background-repeat: no-repeat;
+    background-position: -104px -389px;
+    height: 24px;
+    width: 24px;
+    display: inline-block;
+}
+.caption {
+    color: #585858;
+    font-size: 13px;
+    margin: 16px 0;
+}
+.caption a {
+    margin-right: .3em;
+    font-weight: 600;
+}
+.comment-section {
+    position: relative;
+    border-top: 1px solid #efefef;
+    padding: 26px 26px 26px 0;
+    margin-top: 4px;
+    overflow: hidden
+}
+#cmnt {
+    outline: none;
+    overflow-x: scroll;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #262626;
+    width: 100%;
+    height: 18px;
+    max-height: 80px;
+    resize: none;
+}
+.dot02 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -8px;
+    cursor: pointer;
+    background-image: url(https://goo.gl/NLUdLH);
+    background-repeat: no-repeat;
+    background-position: -434px -345px;
+    height: 16px;
+    width: 16px;
+}
+
+
+
+/*Mi CSS*/
+.fecha-post{
+    color: darkgray;
+    margin: 0 0 0 383px;
+}
+.titulo-post{
+    margin: 15px 0 0 -5px;
+    font-size: 22px;
+    color: gray;
+
+}
+    /*Fin IMG layout*/
+
+    </style>
+</head>
+<body>
+<div class='container-fluid'>
+    <div class='row'>
+        <div class='col-md-12'>
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i> Instagram</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse derechaFloat" id="bs-example-navbar-collapse-1">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-cog fa-lg girar" aria-hidden="true"></i><span class="caret"></span></a>
+          <ul class="dropdown-menu dropdown-content" style="left:0;">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Log out</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <button type="button" class="btn btn-success btn-md derechaFloat marg10" data-toggle="modal" data-target="#myModal">Create new post</button>
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-body">
+            <textarea class="form-control col-xs-12"></textarea>
+            <div>
+                <button type="button" class="btn btn-default btn-sm boton1"><i class="fa fa-camera fa-lg" aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-default btn-sm boton2"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default boton3" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success btn-md boton4">Publish</button>
+            </div>
+        </div>
+      </div>
+      
+    </div>
+    </div>
+  </div>
+</nav>
+        </div>
+    </div>
+
+<ul class="nav nav-pills navpills">
+    <li class="active"><a data-toggle="pill" href="#home" id="grid" class="btn btn-default btn-sm color-botones"><span class="glyphicon glyphicon-th"></span></a></li>
+    <li><a data-toggle="pill" href="#menu1" id="list" class="btn btn-default btn-sm color-botones"><i class="fa fa-square" aria-hidden="true"></i></a></li>
+</ul>
+  
+  <div class="tab-content">
+    <div id="home" class="tab-pane fade in active">
+    <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail" id="center">
+                <img class="group list-group-image"   src="https://i.imgur.com/W8rMh.jpg" alt="">
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://bluepowder.com.au/wp-content/uploads/2017/07/Destination_Signature_Banff_Avenue_Winter_Paul_Zizka_13_Vertical.jpg" alt="">
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="https://i.pinimg.com/originals/97/08/78/970878f86a8896c58f1ac12e6add3866.jpg" alt="">
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="https://i.pinimg.com/originals/78/1a/a3/781aa365a667b621ec93dd4aed5ea737.jpg" alt="">
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="https://pbs.twimg.com/media/C9xHxrnXcAE0lXw.jpg" alt="">
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="https://www.elitefts.com/wp/wp-content/uploads/2013/12/elitefts-lion-Derek-Fry.jpg" alt="">
+
+            </div>
+        </div>
+                <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Nebulosa_de_Eta_Carinae_o_NGC_3372.jpg/600px-Nebulosa_de_Eta_Carinae_o_NGC_3372.jpg" alt="">
+
+            </div>
+        </div>
+                <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="http://mexicocooks.typepad.com/.a/6a00d8341c571453ef016304718303970d-600wi" alt="">
+
+            </div>
+        </div>
+                <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image" src="https://i.pinimg.com/564x/47/fb/35/47fb3543092255b072687eb28df3be23.jpg" alt="">
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+                <div id="products" class="row list-group">
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail" id="center">
+                <section>
+  <div class= 'insta fade-scroll'>
+    <div class='top-insta'>
+    <h2 class="titulo-post">My first photo<span class="fecha-post">12/14</span></h2>
+</a>
+    </div>
+    <div class='post'>
+        <div class="overlay">
+        <span></span>
+        </div>
+      <img src="https://i.imgur.com/W8rMh.jpg">
+ </div>
+    <div class='footer'>
+      
+      <div class='react'>
+        <a href='#' role='button'><span class='love'></span></a>
+        <a href='#' role='button'><span class='comment'></span></a>
+        <a href='#' role='button'><span class='save'></span></a>
+        
+      </div>
+      
+      <div class='caption'>
+        <h5><b>23 Likes</b></h5>
+        <a href='#'></a><span>Done Safe and Sound</span>
+      </div>
+      
+      <div class='comment-section'>
+        <input type='text' id='cmnt' placeholder='Add a comment...'>
+        <span class='dot02'></span>
+      </div>
+        
+    </div> <!-- end Footer -->
+</section>
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+              <section>
+  <div class= 'insta fade-scroll'>
+    <div class='top-insta'>
+    <h2 class="titulo-post">My first photo<span class="fecha-post">12/14</span></h2>
+</a>
+    </div>
+    <div class='post'>
+        <div class="overlay">
+        <span></span>
+        </div>
+      <img src="http://bluepowder.com.au/wp-content/uploads/2017/07/Destination_Signature_Banff_Avenue_Winter_Paul_Zizka_13_Vertical.jpg">
+ </div>
+    <div class='footer'>
+      
+      <div class='react'>
+        <a href='#' role='button'><span class='love'></span></a>
+        <a href='#' role='button'><span class='comment'></span></a>
+        <a href='#' role='button'><span class='save'></span></a>
+        
+      </div>
+      
+      <div class='caption'>
+        <h5><b>23 Likes</b></h5>
+        <a href='#'></a><span>Done Safe and Sound</span>
+      </div>
+      
+      <div class='comment-section'>
+        <input type='text' id='cmnt' placeholder='Add a comment...'>
+        <span class='dot02'></span>
+      </div>
+        
+    </div> <!-- end Footer -->
+</section>
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+              <section>
+  <div class= 'insta fade-scroll'>
+    <div class='top-insta'>
+    <h2 class="titulo-post">My first photo<span class="fecha-post">12/14</span></h2>
+</a>
+    </div>
+    <div class='post'>
+        <div class="overlay">
+        <span></span>
+        </div>
+      <img class="group list-group-image" src="https://i.pinimg.com/originals/97/08/78/970878f86a8896c58f1ac12e6add3866.jpg" alt="">
+ </div>
+    <div class='footer'>
+      
+      <div class='react'>
+        <a href='#' role='button'><span class='love'></span></a>
+        <a href='#' role='button'><span class='comment'></span></a>
+        <a href='#' role='button'><span class='save'></span></a>
+        
+      </div>
+      
+      <div class='caption'>
+        <h5><b>23 Likes</b></h5>
+        <a href='#'></a><span>Done Safe and Sound</span>
+      </div>
+      
+      <div class='comment-section'>
+        <input type='text' id='cmnt' placeholder='Add a comment...'>
+        <span class='dot02'></span>
+      </div>
+        
+    </div> <!-- end Footer -->
+</section>
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+              <section>
+  <div class= 'insta fade-scroll'>
+    <div class='top-insta'>
+    <h2 class="titulo-post">My first photo<span class="fecha-post">12/14</span></h2>
+</a>
+    </div>
+    <div class='post'>
+        <div class="overlay">
+        <span></span>
+        </div>
+      <img src="https://i.pinimg.com/originals/78/1a/a3/781aa365a667b621ec93dd4aed5ea737.jpg">
+ </div>
+    <div class='footer'>
+      
+      <div class='react'>
+        <a href='#' role='button'><span class='love'></span></a>
+        <a href='#' role='button'><span class='comment'></span></a>
+        <a href='#' role='button'><span class='save'></span></a>
+        
+      </div>
+      
+      <div class='caption'>
+        <h5><b>23 Likes</b></h5>
+        <a href='#'></a><span>Done Safe and Sound</span>
+      </div>
+      
+      <div class='comment-section'>
+        <input type='text' id='cmnt' placeholder='Add a comment...'>
+        <span class='dot02'></span>
+      </div>
+        
+    </div> <!-- end Footer -->
+</section>
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+              <section>
+  <div class= 'insta fade-scroll'>
+    <div class='top-insta'>
+    <h2 class="titulo-post">My first photo<span class="fecha-post">12/14</span></h2>
+</a>
+    </div>
+    <div class='post'>
+        <div class="overlay">
+        <span></span>
+        </div>
+      <img src="https://pbs.twimg.com/media/C9xHxrnXcAE0lXw.jpg">
+ </div>
+    <div class='footer'>
+      
+      <div class='react'>
+        <a href='#' role='button'><span class='love'></span></a>
+        <a href='#' role='button'><span class='comment'></span></a>
+        <a href='#' role='button'><span class='save'></span></a>
+        
+      </div>
+      
+      <div class='caption'>
+        <h5><b>23 Likes</b></h5>
+        <a href='#'></a><span>Done Safe and Sound</span>
+      </div>
+      
+      <div class='comment-section'>
+        <input type='text' id='cmnt' placeholder='Add a comment...'>
+        <span class='dot02'></span>
+      </div>
+        
+    </div> <!-- end Footer -->
+</section>
+                
+            </div>
+        </div>
+        <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+              <section>
+  <div class= 'insta fade-scroll'>
+    <div class='top-insta'>
+    <h2 class="titulo-post">My first photo<span class="fecha-post">12/14</span></h2>
+</a>
+    </div>
+    <div class='post'>
+        <div class="overlay">
+        <span></span>
+        </div>
+      <img src="https://www.elitefts.com/wp/wp-content/uploads/2013/12/elitefts-lion-Derek-Fry.jpg">
+ </div>
+    <div class='footer'>
+      
+      <div class='react'>
+        <a href='#' role='button'><span class='love'></span></a>
+        <a href='#' role='button'><span class='comment'></span></a>
+        <a href='#' role='button'><span class='save'></span></a>
+        
+      </div>
+      
+      <div class='caption'>
+        <h5><b>23 Likes</b></h5>
+        <a href='#'></a><span>Done Safe and Sound</span>
+      </div>
+      
+      <div class='comment-section'>
+        <input type='text' id='cmnt' placeholder='Add a comment...'>
+        <span class='dot02'></span>
+      </div>
+        
+    </div> <!-- end Footer -->
+</section>
+
+            </div>
+        </div>
+                <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+              <section>
+  <div class= 'insta fade-scroll'>
+    <div class='top-insta'>
+    <h2 class="titulo-post">My first photo<span class="fecha-post">12/14</span></h2>
+</a>
+    </div>
+    <div class='post'>
+        <div class="overlay">
+        <span></span>
+        </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Nebulosa_de_Eta_Carinae_o_NGC_3372.jpg/600px-Nebulosa_de_Eta_Carinae_o_NGC_3372.jpg">
+ </div>
+    <div class='footer'>
+      
+      <div class='react'>
+        <a href='#' role='button'><span class='love'></span></a>
+        <a href='#' role='button'><span class='comment'></span></a>
+        <a href='#' role='button'><span class='save'></span></a>
+        
+      </div>
+      
+      <div class='caption'>
+        <h5><b>23 Likes</b></h5>
+        <a href='#'></a><span>Done Safe and Sound</span>
+      </div>
+      
+      <div class='comment-section'>
+        <input type='text' id='cmnt' placeholder='Add a comment...'>
+        <span class='dot02'></span>
+      </div>
+        
+    </div> <!-- end Footer -->
+</section>
+
+            </div>
+        </div>
+                <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+              <section>
+  <div class= 'insta fade-scroll'>
+    <div class='top-insta'>
+    <h2 class="titulo-post">My first photo<span class="fecha-post">12/14</span></h2>
+</a>
+    </div>
+    <div class='post'>
+        <div class="overlay">
+        <span></span>
+        </div>
+      <img src="http://mexicocooks.typepad.com/.a/6a00d8341c571453ef016304718303970d-600wi">
+ </div>
+    <div class='footer'>
+      
+      <div class='react'>
+        <a href='#' role='button'><span class='love'></span></a>
+        <a href='#' role='button'><span class='comment'></span></a>
+        <a href='#' role='button'><span class='save'></span></a>
+        
+      </div>
+      
+      <div class='caption'>
+        <h5><b>23 Likes</b></h5>
+        <a href='#'></a><span>Done Safe and Sound</span>
+      </div>
+      
+      <div class='comment-section'>
+        <input type='text' id='cmnt' placeholder='Add a comment...'>
+        <span class='dot02'></span>
+      </div>
+        
+    </div> <!-- end Footer -->
+</section>
+
+            </div>
+        </div>
+                <div class="item  col-xs-4 col-lg-4">
+            <div class="thumbnail">
+              <section>
+  <div class= 'insta fade-scroll'>
+    <div class='top-insta'>
+    <h2 class="titulo-post">My first photo<span class="fecha-post">12/14</span></h2>
+</a>
+    </div>
+    <div class='post'>
+        <div class="overlay">
+        <span></span>
+        </div>
+      <img src="https://i.pinimg.com/564x/47/fb/35/47fb3543092255b072687eb28df3be23.jpg">
+ </div>
+    <div class='footer'>
+      
+      <div class='react'>
+        <a href='#' role='button'><span class='love'></span></a>
+        <a href='#' role='button'><span class='comment'></span></a>
+        <a href='#' role='button'><span class='save'></span></a>
+        
+      </div>
+      
+      <div class='caption'>
+        <h5><b>23 Likes</b></h5>
+        <a href='#'></a><span>Done Safe and Sound</span>
+      </div>
+      
+      <div class='comment-section'>
+        <input type='text' id='cmnt' placeholder='Add a comment...'>
+        <span class='dot02'></span>
+      </div>
+        
+    </div> <!-- end Footer -->
+</section>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </body>
+</html>
